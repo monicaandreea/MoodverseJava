@@ -1,4 +1,4 @@
-package main.java.com.moodverse.appResource;
+package com.moodverse.appResource;
 
 public class ToDoList {
 }

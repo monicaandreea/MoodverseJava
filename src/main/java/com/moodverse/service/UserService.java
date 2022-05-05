@@ -1,4 +1,4 @@
-package main.java.com.moodverse.service;
+package com.moodverse.service;
 
 public class UserService {
 }

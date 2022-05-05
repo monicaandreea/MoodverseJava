@@ -1,4 +1,4 @@
-package main.java.com.moodverse.user;
+package com.moodverse.user;
 
 public class LoggedUser {
 }

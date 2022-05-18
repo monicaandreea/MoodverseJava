@@ -13,8 +13,9 @@
 [//]: # (TODO PUNE DIAGRAMELE CA POZE)
 ## Diagrams
 ### UML
-
+![](/img/uml_diagram.png)
 ### Actions
+![](/img/state_machine_diagram.png)
 
 ## Cerinte proiect
 ### A. Implementarea - notă între 1 și 10

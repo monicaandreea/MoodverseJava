@@ -1,20 +1,22 @@
 package com.moodverse.user;
 
 
-import com.moodverse.appResource.Ambience;
-import com.moodverse.appResource.Background;
-import com.moodverse.appResource.Magic8Ball;
-import com.moodverse.appResource.Timer;
-
 public class Admin extends User {
-    // TODO Singleton
+    private static Admin admin;
     private String username;
     private String password;
 
-    public Admin(Background currentBackground, Timer timer, Magic8Ball magic8Ball, Ambience ambiance, String username, String password) {
-        super(1, currentBackground, timer, magic8Ball, ambiance);
-        this.username = username;
-        this.password = password;
+    private Admin() {
+        super(0, 1, 1, 1, 1);
+        this.username = "admin";
+        this.password = "admin";
+    }
+
+    public static Admin getAdmin(){
+        if(admin == null){
+            admin = new Admin();
+        }
+        return admin;
     }
 
     public String getUsername() {
@@ -39,10 +41,10 @@ public class Admin extends User {
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", userId=" + userId +
-                ", currentBackground=" + currentBackground +
-                ", timer=" + timer +
-                ", magic8Ball=" + magic8Ball +
-                ", ambiance=" + ambiance +
+                ", currentBackgroundId=" + currentBackgroundId +
+                ", timerId=" + timerId +
+                ", magic8BallId=" + magic8BallId +
+                ", ambianceId=" + ambianceId +
                 '}';
     }
 }

@@ -1,12 +1,22 @@
 package com.moodverse.appResource;
 
 public class DailyQuote {
+    private int dailyQuoteId;
     private String author;
     private String message;
 
-    public DailyQuote(String author, String message) {
+    public DailyQuote(int dailyQuoteId, String author, String message) {
+        this.dailyQuoteId = dailyQuoteId;
         this.author = author;
         this.message = message;
+    }
+
+    public int getDailyQuoteId() {
+        return dailyQuoteId;
+    }
+
+    public void setDailyQuoteId(int dailyQuoteId) {
+        this.dailyQuoteId = dailyQuoteId;
     }
 
     public String getAuthor() {

@@ -1,14 +1,24 @@
 package com.moodverse.appResource;
 
 public class Timer {
+    private int timerId;
     private int hours;
     private int minutes;
     private int seconds;
 
-    public Timer(int hours, int minutes, int seconds) {
+    public Timer(int timerId, int hours, int minutes, int seconds) {
+        this.timerId = timerId;
         this.hours = hours;
         this.minutes = minutes;
         this.seconds = seconds;
+    }
+
+    public int getTimerId() {
+        return timerId;
+    }
+
+    public void setTimerId(int timerId) {
+        this.timerId = timerId;
     }
 
     public int getHours() {

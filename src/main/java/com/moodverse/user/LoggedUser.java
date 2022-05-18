@@ -1,26 +1,22 @@
 package com.moodverse.user;
 
-import com.moodverse.appResource.*;
 
 public class LoggedUser extends User {
-    private static int loggedUserNumber = 2; // Admin has id = 1
-
     private String username;
     private String password;
     private String emailAddress;
-    private DailyQuote quote;
-    private ToDoList toDoList;
-    private Streak streak;
+    private int quoteId;
+    private int toDoListId;
+    private int streakId;
 
-    public LoggedUser(Background currentBackground, Timer timer, Magic8Ball magic8Ball, Ambience ambiance, String username, String password, String emailAddress, DailyQuote quote, ToDoList toDoList, Streak streak) {
-        super(loggedUserNumber, currentBackground, timer, magic8Ball, ambiance);
+    public LoggedUser(int userId, int currentBackgroundId, int timerId, int magic8BallId, int ambianceId, String username, String password, String emailAddress, int quoteId, int toDoListId, int streakId) {
+        super(userId, currentBackgroundId, timerId, magic8BallId, ambianceId);
         this.username = username;
         this.password = password;
         this.emailAddress = emailAddress;
-        this.quote = quote;
-        this.toDoList = toDoList;
-        this.streak = streak;
-        loggedUserNumber++;
+        this.quoteId = quoteId;
+        this.toDoListId = toDoListId;
+        this.streakId = streakId;
     }
 
     public String getUsername() {
@@ -47,44 +43,27 @@ public class LoggedUser extends User {
         this.emailAddress = emailAddress;
     }
 
-    public DailyQuote getQuote() {
-        return quote;
+    public int getQuoteId() {
+        return quoteId;
     }
 
-    public void setQuote(DailyQuote quote) {
-        this.quote = quote;
+    public void setQuoteId(int quoteId) {
+        this.quoteId = quoteId;
     }
 
-    public ToDoList getToDoList() {
-        return toDoList;
+    public int getToDoListId() {
+        return toDoListId;
     }
 
-    public void setToDoList(ToDoList toDoList) {
-        this.toDoList = toDoList;
+    public void setToDoListId(int toDoListId) {
+        this.toDoListId = toDoListId;
     }
 
-    public Streak getStreak() {
-        return streak;
+    public int getStreakId() {
+        return streakId;
     }
 
-    public void setStreak(Streak streak) {
-        this.streak = streak;
-    }
-
-    @Override
-    public String toString() {
-        return "LoggedUser{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", emailAddress='" + emailAddress + '\'' +
-                ", quote=" + quote +
-                ", toDoList=" + toDoList +
-                ", streak=" + streak +
-                ", userId=" + userId +
-                ", currentBackground=" + currentBackground +
-                ", timer=" + timer +
-                ", magic8Ball=" + magic8Ball +
-                ", ambiance=" + ambiance +
-                '}';
+    public void setStreakId(int streakId) {
+        this.streakId = streakId;
     }
 }

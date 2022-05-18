@@ -5,12 +5,32 @@ package com.moodverse.appResource;
 */
 
 public class TaskPair {
+    private int taskPairId;
+    private int toDoListId;
     private boolean done;
     private String task;
 
-    public TaskPair(String task) {
-        this.done = false;
+    public TaskPair(int taskPairId, int toDoListId, String task, boolean done) {
+        this.taskPairId = taskPairId;
         this.task = task;
+        this.toDoListId = toDoListId;
+        this.done = done;
+    }
+
+    public int getToDoListId() {
+        return toDoListId;
+    }
+
+    public void setToDoListId(int toDoListId) {
+        this.toDoListId = toDoListId;
+    }
+
+    public int getTaskPairId() {
+        return taskPairId;
+    }
+
+    public void setTaskPairId(int taskPairId) {
+        this.taskPairId = taskPairId;
     }
 
     public boolean isDone() {

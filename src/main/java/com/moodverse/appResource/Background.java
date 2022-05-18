@@ -1,7 +1,6 @@
 package com.moodverse.appResource;
 
 public class Background {
-
     private int backgroundId;
     private String image;
     private String backgroundName;

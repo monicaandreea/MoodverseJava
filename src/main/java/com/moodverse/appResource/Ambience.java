@@ -1,7 +1,6 @@
 package com.moodverse.appResource;
 
 public class Ambience {
-
     private int ambienceId;
     private String sound;
     private String ambienceName;

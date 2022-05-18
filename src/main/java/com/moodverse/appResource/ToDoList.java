@@ -5,18 +5,45 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ToDoList {
-    String title;
-    List<TaskPair> tasks;
-    int progress;
+    private int toDoListId;
+    private String title;
+    private List<TaskPair> tasks;
+    private double progress;
 
-    public ToDoList(String title) {
+    public ToDoList(int toDoListId, String title, Double progress) {
+        this.toDoListId = toDoListId;
         this.title = title;
-        List<TaskPair> default_task = new ArrayList<>();
-        default_task.add(new TaskPair("Default task 1."));
-        default_task.add(new TaskPair("Default task 2."));
-        default_task.add(new TaskPair("Default task 3."));
-        this.tasks = default_task;
-        this.progress = 0;
+//        List<TaskPair> default_task = new ArrayList<>();
+//        default_task.add(new TaskPair("Default task 1."));
+//        default_task.add(new TaskPair("Default task 2."));
+//        default_task.add(new TaskPair("Default task 3."));
+        this.tasks = new ArrayList<>();
+        this.progress = progress;
+    }
+
+
+    public int getToDoListId() {
+        return toDoListId;
+    }
+
+    public void setToDoListId(int toDoListId) {
+        this.toDoListId = toDoListId;
+    }
+
+    public List<TaskPair> getTasks() {
+        return tasks;
+    }
+
+    public void setTasks(List<TaskPair> tasks) {
+        this.tasks = tasks;
+    }
+
+    public double getProgress() {
+        return progress;
+    }
+
+    public void setProgress(double progress) {
+        this.progress = progress;
     }
 
     public String getTitle() {
@@ -25,14 +52,6 @@ public class ToDoList {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public List<TaskPair> getTasks() {
-        return tasks;
-    }
-
-    public int getProgress() {
-        return progress;
     }
 
     public void calculateProgress() {
@@ -60,8 +79,8 @@ public class ToDoList {
         task.setTask(new_text);
     }
 
-    public void addTask(String text){
-        TaskPair task = new TaskPair(text);
+    public void addTask(int taskPairId, int toDoListId, String text, boolean done){
+        TaskPair task = new TaskPair(taskPairId, toDoListId, text, done);
         this.tasks.add(task);
     }
 

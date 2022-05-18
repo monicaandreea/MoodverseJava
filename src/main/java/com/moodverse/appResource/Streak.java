@@ -4,13 +4,23 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Streak {
+    private int streakId;
     private int no_days;
     private Date last_date;
 
-    public Streak() {
+    public Streak(int streakId) {
+        this.streakId = streakId;
         this.no_days = 1;
         SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
         this.last_date = new Date();
+    }
+
+    public int getStreakId() {
+        return streakId;
+    }
+
+    public void setStreakId(int streakId) {
+        this.streakId = streakId;
     }
 
     public int getNo_days() {
